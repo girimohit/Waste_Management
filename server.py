@@ -12,6 +12,10 @@ def hello_world():
 def seg_guide():
     return render_template("seg_guide.html")
 
+@app.route("/binify-bot")
+def about():
+    return render_template("bot.html")
+
 # Run the Flask application
 if __name__ == '__main__':
     app.run(debug=True) 
