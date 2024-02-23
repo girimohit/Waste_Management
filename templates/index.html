@@ -1,58 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SMART WASTE</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.css" />
-  </head>
+{% extends 'base.html' %}
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SMART WASTE</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <button id="seg-guide-btn" class="nav-link">
-                Waste Segregation Guide
-              </button>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="dumping-zone">Nearest Dumping Zone</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Vehicle Support</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Recyle Support</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Seg.Bot</a>
-            </li>
-          </ul>
-          <span class="navbar-text"> Search </span>
-        </div>
-      </div>
-    </nav>
+{% block title %}
+Home
+{% endblock %}
 
-    <div id="data-container"></div>
-    <!-- <script src="../static/js/jquery.js"></script> -->
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-  </body>
-</html>
+{% block css %}
+<link rel="stylesheet" href="{{ url_for ('static', filename = 'css/base.css') }}">
+{% endblock %}
+
+{% block body %}
+<div id="image-container"">
+    <img
+      src="{{ url_for ('static', filename = 'images/bigimage.png') }}"
+      alt="Big Carousel Image"
+      id="big-image"
+    />
+    <div id="img-content" class="img-content">
+        <h1>Transforming waste into a cleaner, greener future. Join us in our mission for a sustainable tomorrow</h1>
+      <!-- <button onclick="openGuide()" class="start-btn seg-guide" id="start-btn">Get Start</button> -->
+      <a class="start-now seg-guide" href="/guide">Start Now</a>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
