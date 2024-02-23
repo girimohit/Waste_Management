@@ -13,6 +13,49 @@
   background-color: #555;
 }
 
+/* ------------------------------- CUSTOM NAV ------------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 2.2vw 3vw  0.7vw 4vw;
+}
+
+.logo-div{
+  font-weight: 800;
+  font-size: 2vw;
+  align-self: center;
+}
+
+.logo{
+  width: 3vw;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5vw;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+
+
+
+/* ------------------------------- CUSTOMRNAV END ------------------------------- */
+
+
 .custom-nav {
   position: fixed;
   top: 0;
@@ -32,12 +75,12 @@
 
 .img-content {
   position: absolute;
-  left: 15%;
+  left: 10%;
   align-items: center;
-  transform: translateX(-15%);
+  transform: translateX(-10%);
   color: black;
   font-weight: 1000;
-  font-size: 2vw;
+  /* font-size: 1vw; */
   width: 35%;
   align-self: center;
 }
@@ -55,6 +98,10 @@
   outline: none;
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-content h2{
+  font-size: 2vw;
 }
 
 .start-now {
