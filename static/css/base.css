@@ -13,6 +13,7 @@
   background-color: #555;
 }
 
+
 /* ------------------------------- CUSTOM NAV ------------------------------- */
 nav {
   position: fixed;
@@ -20,18 +21,21 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* align-items: center; */
-  padding: 2.2vw 3vw  0.7vw 4vw;
+  padding: 0.5vw 3vw 0vw 4vw;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
 }
 
-.logo-div{
+.logo-div {
   font-weight: 800;
   font-size: 2vw;
-  align-self: center;
+  align-self: flex-start;
 }
 
-.logo{
-  width: 3vw;
+.logo {
+  width: 170%;
 }
 
 .nav-links {
@@ -39,7 +43,7 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 5vw;
+  gap: 4vw;
   list-style: none;
   text-decoration: none;
 }
@@ -47,7 +51,7 @@ nav {
 .nav-links a {
   color: black;
   text-decoration: none;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   font-weight: 600;
 }
 
@@ -100,7 +104,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.img-content h2{
+.img-content h2 {
   font-size: 2vw;
 }
 
