@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Upload Image</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*">
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/ai_classifier.js') }}"></script>
+{% endblock %}
