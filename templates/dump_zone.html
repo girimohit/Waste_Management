@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dumping Zone Near Me
+{% endblock %}
+
+{% block body %}
+
+
+<div class="map-container">
+  <h2>Find Nearest Dumping Zone Near You!</h2>
+  <br>
+  <div class="inner-map-container">
+    <iframe src="{{ url_for('static', filename='map.html') }}" frameborder="0" width="100%" height="400px"></iframe>
+  </div>
+  <h6>Finding nearest dumping zones enables people to put waste in its correct place, thereby keeping the environment
+    clean and beautiful. This allows nature to be habitable, sustainable and a safe,toxic-free place. This
+    technology-driven feature caters our idea of smart management of waste, contributing to a greener tommorrow.
+  </h6>
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/dump_zone.js') }}"></script>
+{% endblock %}

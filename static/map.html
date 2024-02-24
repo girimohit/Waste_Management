@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+    </script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" />
+
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        #map_fd779d1b9fde9c9c903f082e8b9ecb75 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+        }
+
+        .leaflet-container {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="folium-map" id="map_fd779d1b9fde9c9c903f082e8b9ecb75"></div>
+</body>
+<script>
+    var map_fd779d1b9fde9c9c903f082e8b9ecb75 = L.map(
+        "map_fd779d1b9fde9c9c903f082e8b9ecb75",
+        {
+            center: [28.6139, 77.209],
+            crs: L.CRS.EPSG3857,
+            zoom: 12,
+            zoomControl: true,
+            preferCanvas: false,
+        }
+    );
+
+    var tile_layer_07e0161505eaafdd80f78bf660c15f3e = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution:
+                '\u0026copy; \u003ca href="https://www.openstreetmap.org/copyright"\u003eOpenStreetMap\u003c/a\u003e contributors',
+            detectRetina: false,
+            maxNativeZoom: 19,
+            maxZoom: 19,
+            minZoom: 0,
+            noWrap: false,
+            opacity: 1,
+            subdomains: "abc",
+            tms: false,
+        }
+    );
+
+    tile_layer_07e0161505eaafdd80f78bf660c15f3e.addTo(
+        map_fd779d1b9fde9c9c903f082e8b9ecb75
+    );
+
+    // ------------------------------- MARKER -------------------------------- //
+    var marker_f7f0d3a8c2d4f199d60f64d0a2a9ad1f = L.marker(
+        [28.5907, 77.2315],
+        {}
+    ).addTo(map_fd779d1b9fde9c9c903f082e8b9ecb75);
+
+    var icon_776ecf2a974d175ea1f53a3049e278fc = L.AwesomeMarkers.icon({
+        extraClasses: "fa-rotate-0",
+        icon: "info-sign",
+        iconColor: "white",
+        markerColor: "red",
+        prefix: "glyphicon",
+    });
+
+    marker_f7f0d3a8c2d4f199d60f64d0a2a9ad1f.setIcon(
+        icon_776ecf2a974d175ea1f53a3049e278fc
+    );
+    var popup_f0a1c65a47fad91a32593626961751e0 = L.popup({ maxWidth: "100%" });
+
+    var html_1394423f8a85efa79bf70640636066fe = $(
+        `<div id="html_1394423f8a85efa79bf70640636066fe" style="width: 100.0%; height: 100.0%;">You are here</div>`
+    )[0];
+    popup_f0a1c65a47fad91a32593626961751e0.setContent(
+        html_1394423f8a85efa79bf70640636066fe
+    );
+
+    marker_f7f0d3a8c2d4f199d60f64d0a2a9ad1f.bindPopup(
+        popup_f0a1c65a47fad91a32593626961751e0
+    );
+
+    // ------------------------------- MARKER -------------------------------- //
+    var marker_8591d1173fb68a4c681b9592ecef2184 = L.marker(
+        [28.5849, 77.2214],
+        {}
+    ).addTo(map_fd779d1b9fde9c9c903f082e8b9ecb75);
+    var icon_be58722e6877d276eef5741e9dd6bc7a = L.AwesomeMarkers.icon({
+        extraClasses: "fa-rotate-0",
+        icon: "info-sign",
+        iconColor: "white",
+        markerColor: "green",
+        prefix: "glyphicon",
+    });
+    marker_8591d1173fb68a4c681b9592ecef2184.setIcon(
+        icon_be58722e6877d276eef5741e9dd6bc7a
+    );
+
+    var popup_e098db60c4e525f9f7892f9cd1196124 = L.popup({ maxWidth: "100%" });
+
+    var html_bfadc8cf4e54e33f947f3cbd5d4c1fe5 = $(
+        `<div id="html_bfadc8cf4e54e33f947f3cbd5d4c1fe5" style="width: 100.0%; height: 100.0%;">SDMC Dump Zone</div>`
+    )[0];
+    popup_e098db60c4e525f9f7892f9cd1196124.setContent(
+        html_bfadc8cf4e54e33f947f3cbd5d4c1fe5
+    );
+
+    marker_8591d1173fb68a4c681b9592ecef2184.bindPopup(
+        popup_e098db60c4e525f9f7892f9cd1196124
+    ).on("click", function (e) {
+        window.open("https://www.google.com/maps/@28.5849,77.2214,19z?entry=ttu", "_blank");
+    });
+
+    // ------------------------------- MARKER -------------------------------- //
+    var marker_53f9933cf793d389a41add45ac12a27c = L.marker(
+        [28.572, 77.2011],
+        {}
+    ).addTo(map_fd779d1b9fde9c9c903f082e8b9ecb75);
+    var icon_cfd94cf2fb1ecd776da5296d984968b7 = L.AwesomeMarkers.icon({
+        extraClasses: "fa-rotate-0",
+        icon: "info-sign",
+        iconColor: "white",
+        markerColor: "green",
+        prefix: "glyphicon",
+    });
+    marker_53f9933cf793d389a41add45ac12a27c.setIcon(
+        icon_cfd94cf2fb1ecd776da5296d984968b7
+    );
+
+    var popup_d34a6f727c8b1552ca8f2fa1a7671678 = L.popup({ maxWidth: "100%" });
+
+    var html_f22536602c6e82f335aaa81d25a7b827 = $(
+        `<div id="html_f22536602c6e82f335aaa81d25a7b827" style="width: 100.0%; height: 100.0%;">MCD Dump Zone</div>`
+    )[0];
+    popup_d34a6f727c8b1552ca8f2fa1a7671678.setContent(
+        html_f22536602c6e82f335aaa81d25a7b827
+    );
+
+    marker_53f9933cf793d389a41add45ac12a27c.bindPopup(
+        popup_d34a6f727c8b1552ca8f2fa1a7671678
+    ).on("click", function (e) {
+        window.open("https://www.google.com/maps/@28.572,77.2011,19z?entry=ttu", "_blank");
+    });
+
+    // ------------------------------- MARKER -------------------------------- //
+    var marker_32e4a428a5dcd3bd75b4154aff17497a = L.marker(
+        [28.5586, 77.2775],
+        {}
+    ).addTo(map_fd779d1b9fde9c9c903f082e8b9ecb75);
+    var icon_7ea9f440aa3378638a7d04d8a64f8e4d = L.AwesomeMarkers.icon({
+        extraClasses: "fa-rotate-0",
+        icon: "info-sign",
+        iconColor: "white",
+        markerColor: "green",
+        prefix: "glyphicon",
+    });
+    marker_32e4a428a5dcd3bd75b4154aff17497a.setIcon(
+        icon_7ea9f440aa3378638a7d04d8a64f8e4d
+    );
+
+    var popup_847fab3975af9eb5beb98a0e053342cc = L.popup({ maxWidth: "100%" });
+
+    var html_54782f9a23a0729b6e3a2fdc1d299435 = $(
+        `<div id="html_54782f9a23a0729b6e3a2fdc1d299435" style="width: 100.0%; height: 100.0%;">Garbage Zone 1</div>`
+    )[0];
+    popup_847fab3975af9eb5beb98a0e053342cc.setContent(
+        html_54782f9a23a0729b6e3a2fdc1d299435
+    );
+
+    marker_32e4a428a5dcd3bd75b4154aff17497a.bindPopup(
+        popup_847fab3975af9eb5beb98a0e053342cc
+    ).on("click", function (e) {
+        window.open("https://www.google.com/maps/@28.5586,77.2775,19z?entry=ttu", "_blank");
+    });
+
+    // ------------------------------- MARKER -------------------------------- //
+    var marker_b8cb3db93c79cc499914cebb6ffc0c98 = L.marker(
+        [28.5812, 77.2631],
+        {}
+    ).addTo(map_fd779d1b9fde9c9c903f082e8b9ecb75);
+    var icon_1aa310faecc43aab8a6b757cd00a4382 = L.AwesomeMarkers.icon({
+        extraClasses: "fa-rotate-0",
+        icon: "info-sign",
+        iconColor: "white",
+        markerColor: "green",
+        prefix: "glyphicon",
+    });
+    marker_b8cb3db93c79cc499914cebb6ffc0c98.setIcon(
+        icon_1aa310faecc43aab8a6b757cd00a4382
+    );
+
+    var popup_74cd9302a37d8d3951b57dc0ebdd00b7 = L.popup({ maxWidth: "100%" });
+
+    var html_954e6103cc1a4a24896a766b74ab9882 = $(
+        `<div id="html_954e6103cc1a4a24896a766b74ab9882" style="width: 100.0%; height: 100.0%;">Garbage Zone 2</div>`
+    )[0];
+    popup_74cd9302a37d8d3951b57dc0ebdd00b7.setContent(
+        html_954e6103cc1a4a24896a766b74ab9882
+    );
+
+    marker_b8cb3db93c79cc499914cebb6ffc0c98.bindPopup(popup_74cd9302a37d8d3951b57dc0ebdd00b7).on("click", function (e) {
+        window.open("https://www.google.com/maps/@28.5812,77.2631,19z?entry=ttu", "_blank");
+    })
+</script>
+
+</html>
