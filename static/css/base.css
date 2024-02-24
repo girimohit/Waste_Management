@@ -116,7 +116,6 @@ nav {
   color: white;
   font-size: 1vw;
   padding: 0.5vw 3vw;
-  font-weight: ;
   width: 8vw;
   height: 3vw;
   cursor: pointer;
@@ -126,7 +125,4 @@ nav {
 
 
 
-/* -------------------------- SEGREGATION GUIDE CSS ------------------------- */
-.guide-content {
-  padding: 4%;
-}
+/* ----------------------------- BINIFY BOT CSS ----------------------------- */
