@@ -11,10 +11,10 @@
 #### Install all packages
 ```pip install -r requirements.txt```
 
+#### Run AI Image Classifier
+```streamlit run waste.py --server.port 8501```
+
 #### Run server & Enjoy
 ```python server.py```
 
-#### Also run AI Image Classifier
-```streamlit run waste.py --server.port 8501```
-
->>>>>>> 1131dec8678b051757b347881f1d29d05ee07901
+1131dec8678b051757b347881f1d29d05ee07901
