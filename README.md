@@ -18,3 +18,8 @@
 ```python server.py```
 
 1131dec8678b051757b347881f1d29d05ee07901
+
+### For Database Connection
+```flask db init```<br>
+```flask db migrate -m "Message"```<br>
+```flask db upgrade```<br>
