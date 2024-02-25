@@ -156,3 +156,38 @@ nav {
   width: 50%;
   padding: 3% 0 0 0;
 }
+
+
+/* ----------------------------- VEHICLE SUPPORT ---------------------------- */
+.register-vehicle{
+  position: absolute;
+  left: 50%;
+  transform:  translateX(-50%);
+  padding: 2vw;
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+#register-vehicle input{
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #000000;
+  margin: 1vw 0;
+}
+
+#register-vehicle input:focus{
+  outline: none;
+}
+
+#register-vehicle button{
+  background-color: black;
+  color: white;
+  width: 33%;
+  border: none;
+  border-radius: 20px;
+  padding: 0 0.3vw;
+  margin: auto;
+  font-size: 1vw;
+}

@@ -1,9 +1,13 @@
 from flask import Flask, request, render_template, redirect
+from models import db, VehicleData
+from flask_migrate import Migrate
 import os
 
+
 app = Flask(__name__)
-UPLOAD_FOLDER = "uploads"
-app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///waste_management.db"
+db.init_app(app)
+migrate = Migrate(app, db)
 
 
 # --------------------------------- Home Page -------------------------------- #
@@ -22,6 +26,27 @@ def seg_guide():
 @app.route("/dump-zone", methods=["GET", "POST"])
 def dump_zone():
     return render_template("dump_zone.html")
+
+
+# ------------------------------ Vehicle Support ----------------------------- #
+@app.route("/vehicle-support", methods=["GET", "POST"])
+def vehicle_support():
+    if request.method == "POST":
+        name = request.form.get("name")
+        location = request.form.get("location")
+        contact = request.form.get("contact_num")
+
+        vehicleData = VehicleData(name=name, location=location, contact=contact)
+        db.session.add(vehicleData)
+        db.session.commit()
+        return redirect("/vehicle-support")
+
+    prevData = VehicleData.query.all()
+    for i in prevData:
+        print(i.name)
+        print(i.location)
+        print(i.contact)
+    return render_template("vehicle_support.html", vehicle_data = prevData)
 
 
 # -------------------------------- AI Chat bot ------------------------------- #

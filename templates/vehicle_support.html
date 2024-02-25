@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Vehicle Support
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/vehicle_support.css') }}" />
+{% endblock %}
+
+
+{% block body %}
+<button id="register-btn">Register Yourself</button>
+
+<div id="main-profile-div">
+    {% for i in vehicle_data %}
+    <div id="profile" class="profile">
+        <div id="info" class="info">
+            <div id="profile-icon-div" class="profile-icon-div">
+                <img class="profile-icon" src="{{ url_for('static', filename='images/profile-icon.svg') }}" alt="" />
+            </div>
+            <div id="person-info" class="person-info">
+                <h5>{{ i.name }}</h5>
+                <p>{{ i.contact }}</p>
+                <p>{{ i.location }}</p>
+            </div>
+        </div>
+        <div id="viewer-action" class="viewer-action">
+            <h6>Message</h6>
+            <h6>More Info</h6>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="outer-modal-div" class="outer-modal-div">
+    <form action="/vehicle-support" class="register-vehicle" id="register-vehicle" method="POST">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="location" placeholder="Location" />
+        <input type="text" name="contact_num" placeholder="Contact Number" />
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename = 'js/vehicle.js') }}"></script>
+{% endblock %}
